@@ -44,8 +44,8 @@ function addNewItem() {
     document.querySelector("#new-item").value = "";
     if (new_item != "") {
         let div = document.createElement("div");
-        div.innerHTML = `<li class="list-item">
-                            <input type="checkbox">
+        div.innerHTML = `<li class="list-item list-group-item">
+                            <input class='form-check-input' type="checkbox">
                             <span class="start-0">${new_item}</span>
                             <button type="button" class="btn-close position-absolute end-0" aria-label="Close"></button>
                         </li>`;

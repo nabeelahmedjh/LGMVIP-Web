@@ -16,6 +16,10 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
 
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,25 +27,15 @@
 <body>
     <div id='todo' class="container center">
         <div>
-            <h1> TODO List</h1>
+            <h1 class="pb-4"> TODO LIST</h1>
             <div class="input-group input-group-lg">
                 <input id='new-item' class="form-control" placeholder="Enter a task here" type="text">
-                <button class="btn btn-primary" id="add-item" type="submit">Add</button>
+                <button class="btn btn-dark " id="add-item" type="submit">Add</button>
 
             </div>
 
             <div class="todo-items">
-                <ul id="items-list" class="position-relative">
-                    <li class="list-item">
-                        <input type="checkbox">
-                        <span class="start-0">Hit the gym</span>
-                        <button type="button" class="btn-close position-absolute end-0" aria-label="Close"></button>
-                    </li>
-                    <li class="list-item">
-                        <input type="checkbox">
-                        <span>Hit the gym</span>
-                        <button type="button" class="btn-close position-absolute end-0" aria-label="Close"></button>
-                    </li>
+                <ul id="items-list" class="position-relative list-group list-group-flush">
                 </ul>
             </div>
 
