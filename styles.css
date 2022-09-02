@@ -1,0 +1,18 @@
+#todo {
+    padding: 3% 30%;
+}
+
+.center {
+    text-align: center;
+}
+
+p {
+    text-align: left;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+li {
+    list-style: none;
+}
