@@ -1,3 +1,3 @@
 # TODO LIST
 
-### Task 1 of Lets grow more vertial internship (LGMVIP)
+### Task 1 of Lets grow more virtual internship (LGMVIP)
