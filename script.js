@@ -5,9 +5,6 @@ document.querySelector("#add-item").addEventListener("click", () => {
     removeClosed();
 });
 
-itemCheck();
-removeClosed();
-
 function itemCheck() {
     const items = document.querySelectorAll(".list-item input");
 
@@ -47,11 +44,11 @@ function addNewItem() {
     document.querySelector("#new-item").value = "";
     if (new_item != "") {
         let div = document.createElement("div");
-        div.innerHTML = `<div class="list-item">
-                        <input type="checkbox">
-                        <span>${new_item}</span>
-                        <button type="button" class="btn-close" aria-label="Close"></button>
-                    </div>`;
+        div.innerHTML = `<li class="list-item">
+                            <input type="checkbox">
+                            <span class="start-0">${new_item}</span>
+                            <button type="button" class="btn-close position-absolute end-0" aria-label="Close"></button>
+                        </li>`;
 
         document.querySelector("#items-list").innerHTML += div.innerHTML;
         console.log(div.innerHTML);

@@ -24,29 +24,27 @@
     <div id='todo' class="container center">
         <div>
             <h1> TODO List</h1>
-            <div>
-                <input id='new-item' type="text">
-                <button id="add-item" type="submit">Add</button>
+            <div class="input-group input-group-lg">
+                <input id='new-item' class="form-control" placeholder="Enter a task here" type="text">
+                <button class="btn btn-primary" id="add-item" type="submit">Add</button>
 
             </div>
 
-            <ul id="items-list">
-                <li class="list-item">
-                    <input type="checkbox">
-                    <span>Hit the gym</span>
-                    <button type="button" class="btn-close" aria-label="Close"></button>
-                </li>
-                <li class="list-item">
-                    <input type="checkbox">
-                    <span>Hit the gym</span>
-                    <button type="button" class="btn-close" aria-label="Close"></button>
-                </li>
-                <li class="list-item">
-                    <input type="checkbox">
-                    <span>Hit the gym</span>
-                    <button type="button" class="btn-close" aria-label="Close"></button>
-                </li>
-            </ul>
+            <div class="todo-items">
+                <ul id="items-list" class="position-relative">
+                    <li class="list-item">
+                        <input type="checkbox">
+                        <span class="start-0">Hit the gym</span>
+                        <button type="button" class="btn-close position-absolute end-0" aria-label="Close"></button>
+                    </li>
+                    <li class="list-item">
+                        <input type="checkbox">
+                        <span>Hit the gym</span>
+                        <button type="button" class="btn-close position-absolute end-0" aria-label="Close"></button>
+                    </li>
+                </ul>
+            </div>
+
         </div>
 
     </div>
