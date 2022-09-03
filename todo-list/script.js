@@ -1,8 +1,12 @@
 document.querySelector("#add-item").addEventListener("click", () => {
-    removeChecked();
-    addNewItem();
-    itemCheck();
-    removeClosed();
+    new_item = document.querySelector("#new-item").value;
+    if (new_item != "") {
+        removeChecked();
+        addNewItem(new_item);
+        itemCheck();
+        removeClosed();
+        document.querySelector("#new-item").value = "";
+    }
 });
 
 function itemCheck() {
@@ -39,9 +43,7 @@ function removeClosed() {
     }
 }
 
-function addNewItem() {
-    let new_item = document.querySelector("#new-item").value;
-    document.querySelector("#new-item").value = "";
+function addNewItem(new_item) {
     if (new_item != "") {
         let div = document.createElement("div");
         div.innerHTML = `<li class="list-item list-group-item">
