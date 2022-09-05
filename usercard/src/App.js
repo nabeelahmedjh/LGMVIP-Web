@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+import "./App.css";
+import UserCardsList from "./UserCardsList";
+import Navbar from "./Navbar";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [users, setUsers] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [gotUsers, setGotUsers] = useState(false);
+
+    const getUsers = async () => {
+        setLoading(true);
+        const response = await fetch("https://reqres.in/api/users?page=1");
+        const responseData = await response.json();
+
+        setTimeout(() => {
+            setGotUsers(true);
+            setLoading(false);
+        }, 1000);
+
+        setUsers(responseData.data);
+        console.log(responseData.data);
+    };
+
+    return (
+        <>
+            <Navbar getUsers={getUsers} />
+            <UserCardsList
+                users={users}
+                loading={loading}
+                gotUsers={gotUsers}
+            />
+        </>
+    );
 }
 
 export default App;
