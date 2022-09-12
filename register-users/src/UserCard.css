@@ -1,0 +1,17 @@
+.round {
+    border-radius: 50%;
+}
+
+.avatar {
+    width: 200px;
+}
+
+.user-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3% 10%;
+    border: solid;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
